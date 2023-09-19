@@ -1,11 +1,12 @@
-from CTkScrollableDropdown import *
+""" 
+Here is the building or blueprint file where we make design and setting all the
+attributes, methodes, and behavior or all widgets in app
+"""
+from CTkScrollableDropdown import CTkScrollableDropdown
 import customtkinter as ctk
 import json
 
-ctk.set_appearance_mode("dark")
-VALUES = list()
-with open("fonts_families.json", "r") as fp:
-    VALUES = json.load(fp=fp)
+
 
 class Root(ctk.CTk):
     def __init__(self,):
@@ -17,7 +18,6 @@ class Root(ctk.CTk):
         # set grid layout of root window app
         self.grid_columnconfigure((0,1), weight=1)
         self.grid_rowconfigure((0,1,2,3,4), weight=1)
-        
       
 class OptionMenu(ctk.CTkOptionMenu):
     def __init__(self, root):
@@ -42,9 +42,7 @@ class FontEntry(ctk.CTkEntry):
          
     def reset_default_border_color(self, event):
         self.configure(border_color="gray65") 
-        
-        
-        
+     
 class TextBox(ctk.CTkTextbox):
     def __init__(self,root):
         super().__init__(root,corner_radius=12, fg_color="white", text_color="#171717",font=ctk.CTkFont("Mooli", 25, "bold") )
@@ -55,33 +53,17 @@ class TextBox(ctk.CTkTextbox):
         self.configure(border_color="blue") 
         self.update()
 
-        
-        
-
 class ChangeFontButton(ctk.CTkButton):
-    def __init__(self, root, textbox:TextBoxLabel, font_entry:FontEntry):
-        super().__init__(root,text="Change", font=ctk.CTkFont("Mooli", 10, "bold"))
+    def __init__(self, root, textbox:TextBoxLabel, font_entry:FontEntry,**kwargs):
+        super().__init__(root,text="Change", font=ctk.CTkFont("Mooli", 10, "bold"),**kwargs)
         self.configure(command=self.change_font)
         self.grid(column=1, row=2,)
+        self.font_entry = font_entry
+        self.textbox = textbox
+        
     def change_font(self,):
-        font_entry_value = font_entry.get()
-        font_entry.delete(0,  ctk.END)
-        textbox.configure(font=ctk.CTkFont(f"{font_entry_value}",25,'bold'))
-        textbox.focus_force()
-
-                
-
-
-
-
-    
-root = Root()
-# option_menu = OptionMenu(root)
-# option_menu.configure(values=VALUES)
-font_entry = FontEntry(root)
-CTkScrollableDropdown(font_entry, values=VALUES,autocomplete=True, command=lambda e: font_entry.insert(0,e))
-textbox_label = TextBoxLabel(root)
-change_font_button = ChangeFontButton(root,textbox_label, font_entry)
-textbox = TextBox(root)
-
-root.mainloop()      
+        font_entry_value = self.font_entry.get()
+        self.font_entry.delete(0,  ctk.END)
+        self.textbox.configure(font=ctk.CTkFont(f"{font_entry_value}",25,'bold'))
+        self.textbox.focus_force()
+     
