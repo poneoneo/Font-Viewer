@@ -1,6 +1,7 @@
 """ 
 Here is the main file where the window is launched from.
 """
+
 import customtkinter as ctk
 from widgets_blueprints import (
     FontEntry,
@@ -10,6 +11,7 @@ from widgets_blueprints import (
     ChangeFontButton,
     TextBox,
 )
+
 from tkinter import font, Tk
 tk = Tk()
 # get all font available on pc owner
