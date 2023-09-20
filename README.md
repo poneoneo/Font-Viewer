@@ -10,8 +10,6 @@ A **simple fonts viewer**, that allow you, look how your text will change if you
 ## Demo
 
 ![demo](https://github.com/poneoneo/Font-Viewer/assets/52409392/553f415e-03e4-416b-9cc5-1d587b6a6611)
-
-
 ## How to Install
 ```python
 pip install -r requirements.txt
