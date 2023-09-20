@@ -5,5 +5,6 @@
 ![Static Badge](https://img.shields.io/badge/TomSchimansky-CustomTkinter-blue?labelColor=green)
 ![Static Badge](https://img.shields.io/badge/Akscape-CtkScrollableDropdown-blue)
 
-A **basic fonts viewer**, that allow you, look how your text will change if you apply a selected font in entry widget
+A **simple fonts viewer**, that allow you, look how your text will change if you apply a selected font in entry widget
+
 
