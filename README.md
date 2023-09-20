@@ -9,3 +9,12 @@ A **simple fonts viewer**, that allow you, look how your text will change if you
 
 ## Demo
 
+## How to Install
+```python
+pip install -r requirements.txt
+#then launch the main.py file
+py main.py
+#or for linux devices let try
+python3 main.py
+```
+
