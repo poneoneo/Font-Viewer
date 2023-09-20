@@ -8,7 +8,8 @@
 A **simple fonts viewer**, that allow you, look how your text will change if you apply a selected font in entry widget
 
 ## Demo
-![demo](https://github.com/poneoneo/Font-Viewer/assets/52409392/4c0546b7-a620-40a3-9fe3-32f1ccb21e57)
+
+![demo](https://github.com/poneoneo/Font-Viewer/assets/52409392/553f415e-03e4-416b-9cc5-1d587b6a6611)
 
 
 ## How to Install
