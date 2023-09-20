@@ -7,4 +7,5 @@
 
 A **simple fonts viewer**, that allow you, look how your text will change if you apply a selected font in entry widget
 
+## Demo
 
